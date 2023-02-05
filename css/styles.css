@@ -11,6 +11,14 @@ body {
     text-transform: uppercase;
 }
 
+img {
+    /* make all images resizable and they are limited to the max width of their parent container */
+    /* 100% of parents container and don’t beyond that */
+    max-width: 100%;
+    /* img default는 a태그처럼 inline element인데, when they move side by side, they often bring white space in with them. they don't actually fit side by side. */
+    display: block;
+}
+
 .container {
     max-width: 60rem;
     margin: 0 auto;
@@ -56,5 +64,4 @@ footer {
     .promo {
         width: calc(96%/3);
     }
-    /* .promo에 있던 width를 잘라와서 붙여준다. flex실행 될 때 width가 full 이었다가 작아지게 한다 */
 }
